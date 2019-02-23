@@ -1,29 +1,28 @@
 body  
-{ background-color: whitesmoke}
+{ 
+    background-color: whitesmoke
+}
 
-h1
+h1  
 {
     color: deeppink;
-font-family: sans-serif; 
-font-style: italic;
-font-size: 60px;
- }   
-p
-{
+    font-family: sans-serif; 
+    font-style: italic;
+    font-size: 60px;
+ }
+
+p   {
     color:dimgrey; 
     font-size: 40px;
     font-style: italic;
-    font-family: ;
-        
-}
-
-* {
-   
 }
     
 h2
 {
-    color:grey; background-color: floralwhite; font-weight: 1000; font-size: 40px;
+    color:grey; 
+    background-color: floralwhite; 
+    font-weight: 1000; 
+    font-size: 40px;
 }
     
 h3
@@ -31,11 +30,11 @@ h3
     color:dimgrey; 
     font-size: 40px;
     font-style: italic;
-    font-family: ;
 }
 
 
-#unique {
+#unique 
+{
     border: solid pink
 }
     
