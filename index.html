@@ -4,29 +4,25 @@
 <head>
     <title> The week blind theme game </title>
     <link rel="stylesheet" href="style.css">
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js'></script>
 </head>
 
 <body>
     <h1> The week blind theme game </h1>
     <p> Thématique de la semaine du 25 Février </p>
-    <h2> Nom de la thématique </h2>
+    <h2 data-bind="text: currentTheme"></h2>
 
     <p> Les thématiques proposées </p>
-    <form method="POST" action="ton_script">
         <label for="name">Nouvelle thématique :</label>
-        <input type="theme" name="theme" value="entrer la thématique" />
-        <input type="submit" name="ok" value="envoyer" />
-    </form>
+        <input type="theme" name="theme" placeholder="entrer la thématique" data-bind="value: themeToSave" />
+        <button data-bind="click: postThemeToSave" value="envoyer">envoyer</button>
 
     <h3> Thématiques passées </h3>
-    <ol>
-        <li>Thématique du 12 Février : la salade </li>
-        <li>Thématique du ...</li>
-        <li>Thématique du ...</li>
-        <li>Thématique du ...</li>
-        <li>Thématique du ...</li>
-    </ol>
+    <ul data-bind="foreach: oldThemes">
+        <li data-bind="text: name"></li>
+    </ul>
 
+    <script type='text/javascript' src='index.js'></script>
 </body>
 
 </html>
