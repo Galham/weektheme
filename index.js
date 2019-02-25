@@ -9,7 +9,7 @@ function AppViewModel() {
 function getCurrentTheme(){
     var Http = new XMLHttpRequest();
     Http.responseType = 'json';
-    var url='http://weektheme.azurewebsites.net/';
+    var url='https://weektheme.azurewebsites.net/';
     Http.open("GET", url);
     Http.send();
     Http.onreadystatechange=(e)=>{
@@ -21,7 +21,7 @@ function getCurrentTheme(){
 function getOldThemes(){
     var Http = new XMLHttpRequest();
     Http.responseType = 'json';
-    var url='http://weektheme.azurewebsites.net/oldThemes';
+    var url='https://weektheme.azurewebsites.net/oldThemes';
     Http.open("GET", url);
     Http.send();
     Http.onreadystatechange=(e)=>{
@@ -33,7 +33,7 @@ function getOldThemes(){
 function postThemeToSave(){
     var Http = new XMLHttpRequest();
     Http.responseType = 'json';
-    var url='http://weektheme.azurewebsites.net/themes';
+    var url='https://weektheme.azurewebsites.net/themes';
     var theme = vm.themeToSave();
     var themeJson = {name: theme};
     Http.open("POST", url);
