@@ -40,6 +40,9 @@ function postThemeToSave(){
     Http.setRequestHeader('Content-type', 'application/json');
     Http.send(JSON.stringify(themeJson));
     Http.onreadystatechange=(e)=>{
+        if(Http.status == 200){
+            vm.themeToSave("");
+        }
         console.log(Http.status);
     }
 }
